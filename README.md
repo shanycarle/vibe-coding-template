@@ -39,6 +39,7 @@ Lis CLAUDE.md et docs/ARCHITECTURE.md. Prépare api/ pour travailler en local :
 - crée .env à partir de .env.example et génère la clé ;
 - MySQL : base « monapp », utilisateur root, mot de passe [ton mot de passe MySQL] ;
 - crée la base si elle n'existe pas ;
+- dans .env, mets [ton courriel] dans ADMIN_EMAILS ;
 - lance les migrations.
 Explique chaque étape en une phrase.
 ```

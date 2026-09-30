@@ -17,6 +17,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Admin Emails
+    |--------------------------------------------------------------------------
+    |
+    | Comma-separated list of the emails allowed into the Filament admin
+    | panel (/admin). Anyone else gets a 403, in local and in production.
+    |
+    */
+
+    'admin_emails' => array_values(array_filter(array_map(
+        fn (string $email) => strtolower(trim($email)),
+        explode(',', (string) env('ADMIN_EMAILS', '')),
+    ))),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |

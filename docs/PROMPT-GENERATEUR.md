@@ -13,8 +13,8 @@ Crée dans ce dossier vide un template de projet :
 - remplace PHPUnit par Pest (composer remove phpunit/phpunit --dev, puis composer require pestphp/pest --dev -W, puis vendor/bin/pest --init), active RefreshDatabase pour les tests Feature dans tests/Pest.php et réécris les tests d'exemple en syntaxe Pest ;
 - installe Sanctum avec php artisan install:api, ajoute le trait HasApiTokens au modèle User, active $middleware->throttleApi() dans bootstrap/app.php et définis le limiteur « api » (60 requêtes/minute par utilisateur ou IP) dans AppServiceProvider ;
 - dans bootstrap/app.php, rends les erreurs en JSON pour les routes api/* ;
-- installe Filament 4 (composer require filament/filament:"^4.0" -W, puis php artisan filament:install --panels, panneau « admin ») ;
-- écris un test Pest pour GET /api/user (invité refusé, connecté accepté, throttle présent) et pour /admin (invité redirigé vers /admin/login) ;
+- installe Filament 4 (composer require filament/filament:"^4.0" -W, puis php artisan filament:install --panels, panneau « admin »), et fais implémenter FilamentUser au modèle User : canAccessPanel autorise seulement les courriels de ADMIN_EMAILS (variable ajoutée dans .env.example, lue dans config/app.php, liste séparée par des virgules) ;
+- écris un test Pest pour GET /api/user (invité refusé, connecté accepté, throttle présent) et pour /admin (invité redirigé vers /admin/login, courriel autorisé accepté, autre courriel refusé en 403) ;
 - dans api/.env.example : APP_NAME=MonApp, APP_LOCALE=fr, APP_FAKER_LOCALE=fr_CA, QUEUE_CONNECTION=sync, et MySQL : DB_CONNECTION=mysql, DB_HOST=127.0.0.1, DB_PORT=3306, DB_DATABASE=monapp, DB_USERNAME=root, DB_PASSWORD vide ;
 - garde api/composer.lock dans Git, et vérifie que php artisan test passe.
 

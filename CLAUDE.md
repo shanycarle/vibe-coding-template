@@ -19,7 +19,7 @@
 
 ## Commandes
 - API, tests : `cd api && php artisan test`
-- Admin, créer un compte : `cd api && php artisan make:filament-user`
+- Admin, créer un compte : `cd api && php artisan make:filament-user` (son courriel doit être dans `ADMIN_EMAILS` du `.env`, sinon erreur 403)
 - API, serveur : `cd api && php artisan serve --host=0.0.0.0` (lancé par l'utilisateur dans son Terminal 2)
 - App, serveur : `cd app && npx expo start` (lancé par l'utilisateur dans son Terminal 3)
 - App, vérification des types : `cd app && npx tsc --noEmit`
