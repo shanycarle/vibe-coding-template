@@ -14,10 +14,11 @@ Puis dans VS Code : Fichier → Ouvrir le dossier… → mon-projet.
 
 | Dossier ou fichier | Rôle |
 |---|---|
-| `api/` | Projet Laravel 13, configuré pour MySQL (base `monapp`) |
+| `api/` | Projet Laravel 13 avec Sanctum (API), Filament 4 (admin sur `/admin`) et Pest (tests), configuré pour MySQL (base `monapp`) |
 | `app/` | Projet Expo avec Expo Router, écran vide |
 | `CLAUDE.md` | La mémoire du projet : stack, commandes, règles |
 | `docs/ARCHITECTURE.md` | La spécification, que Claude rédige avec toi |
+| `docs/PLAN.md` | Les étapes du MVP, que Claude rédige à partir de la spécification |
 | `.claude/agents/` | Les sous-agents testeur et codeur (bloc 5) |
 
 ## Les 3 terminaux

@@ -11,14 +11,15 @@
 - `.claude/agents/` : sous-agents testeur et codeur
 
 ## Stack
-- API : Laravel 13, PHP 8.4, Sanctum
-- Admin : Filament 4
+- API : Laravel 13, PHP 8.4, Sanctum (routes dans `api/routes/api.php`), tests Pest
+- Admin : Filament 4, panneau sur `/admin` (`api/app/Providers/Filament/AdminPanelProvider.php`)
 - BD : MySQL en local, MariaDB/MySQL en production (cPanel)
 - App : Expo, TypeScript, Expo Router
 - Hébergement : cPanel mutualisé (pas de SSH, pas de processus en continu)
 
 ## Commandes
 - API, tests : `cd api && php artisan test`
+- Admin, créer un compte : `cd api && php artisan make:filament-user`
 - API, serveur : `cd api && php artisan serve --host=0.0.0.0` (lancé par l'utilisateur dans son Terminal 2)
 - App, serveur : `cd app && npx expo start` (lancé par l'utilisateur dans son Terminal 3)
 - App, vérification des types : `cd app && npx tsc --noEmit`
