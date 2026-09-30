@@ -5,7 +5,7 @@ Point de départ de la formation de Shany Carle : un backend Laravel et une app 
 ## Récupérer le template
 
 ```
-git clone [URL-DU-TEMPLATE] mon-projet
+git clone https://github.com/shanycarle/vibe-coding-template.git mon-projet
 ```
 
 Puis dans VS Code : Fichier → Ouvrir le dossier… → mon-projet.
