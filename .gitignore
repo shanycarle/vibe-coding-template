@@ -1,0 +1,21 @@
+# Secrets : jamais dans Git
+.env
+.env.*
+!.env.example
+docs/env-production.txt
+
+# Dépendances et builds (se recréent)
+vendor/
+node_modules/
+dist/
+.expo/
+
+# Fichiers de déploiement générés
+api-deploy.zip
+pwa.zip
+*.aab
+*.ipa
+
+# Système
+.DS_Store
+Thumbs.db
